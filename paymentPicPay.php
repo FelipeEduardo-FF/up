@@ -12,7 +12,7 @@
 	  *@var type String: $urlCallBack
 	  */
 	  
-	  private $urlCallBack = "https://testeapppic.herokuapp.com";
+	  private $urlCallBack = "";
 	 
 	  /*
 	   *@var type String: $urlReturn

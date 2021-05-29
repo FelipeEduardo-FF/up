@@ -30,7 +30,7 @@
 
   
   $data = json_decode(file_get_contents('php://input'), true);
-  echo file_get_contents('php://input');
+  
   
 
   
@@ -54,15 +54,15 @@
 	if(isset($payment->message)):
 	
 		echo '{ "error" : "' . $payment->message . '" } ';
-  
+    echo 'teste';
 		
 	else:
 		 
  	   $link   = $payment->paymentUrl;
 	   $qrCode = $payment->qrcode->base64;
 	 
-     echo '{ 
-             
+     echo '{ "paymentUrl": "' . $payment->paymentUrl . '", 
+             "qrcode" : "' . $payment->qrcode->content . '",
              "qrcodeBase64" : "' . $payment->qrcode->base64 . '" }';
 	   
     endif;

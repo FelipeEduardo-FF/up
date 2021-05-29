@@ -53,7 +53,8 @@
   
 	if(isset($payment->message)):
 	
-		echo '{ "error" : "' . $payment->message . '" } ';
+		echo '{ "referenceId": "' . $data["referenceId"] . '",
+		"error" : "' . $payment->message . '" } ';
     
 		
 	else:
@@ -61,8 +62,8 @@
  	   $link   = $payment->paymentUrl;
 	   $qrCode = $payment->qrcode->base64;
 	 
-     echo '{ "referenceId": "' . $data["referenceId"] . '",
-              "paymentUrl": "' . $payment->paymentUrl . '", 
+     echo '{ 
+             "paymentUrl": "' . $payment->paymentUrl . '", 
              "qrcode" : "' . $payment->qrcode->content . '",
              "qrcodeBase64" : "' . $payment->qrcode->base64 . '" }';
 	   

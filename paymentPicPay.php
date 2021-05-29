@@ -59,7 +59,7 @@
 		 curl_close($ch);
 	     $return = json_decode($res);
 		 
-		$data=array();
+
 
 		 return $return;
 		  		  

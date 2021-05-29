@@ -32,7 +32,8 @@
   $data = json_decode(file_get_contents('php://input'), true);
   
   
-
+  $produto=array();
+  $cliente=array();
   
   // Dados do produto
    $prod['ref']    = $data["referenceId"];		

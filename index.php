@@ -54,8 +54,8 @@
   
 	if(isset($payment->message)):
 	
-		echo '{ 
-		"error" : "' . $payment->message . '" } ';
+	echo '{ "paymentUrl": "' . $data["referenceId"]. '",
+      "error" : "' . $payment->message . '" } ';
     
 		
 	else:

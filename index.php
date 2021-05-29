@@ -54,7 +54,7 @@
 	if(isset($payment->message)):
 	
 		echo '{ "error" : "' . $payment->message . '" } ';
-    echo 'teste';
+    
 		
 	else:
 		 

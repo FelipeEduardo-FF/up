@@ -30,8 +30,9 @@
 
   
   $data = json_decode(file_get_contents('php://input'), true);
+  echo file_get_contents('php://input');
   
-  
+
   
   // Dados do produto
    $prod['ref']    = $data["referenceId"];		
@@ -53,7 +54,7 @@
 	if(isset($payment->message)):
 	
 		echo '{ "error" : "' . $payment->message . '" } ';
-    echo 'teste';
+    
 		
 	else:
 		 

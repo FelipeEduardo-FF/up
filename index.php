@@ -33,7 +33,7 @@
   
   
 
-  echo '{ "paymentUrl": "' . $data["referenceId"]. '"}'
+  
   // Dados do produto
    $prod['ref']    = $data["referenceId"];		
    $prod['nome']  = $data["productName"];	

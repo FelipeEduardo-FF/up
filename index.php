@@ -61,8 +61,8 @@
  	   $link   = $payment->paymentUrl;
 	   $qrCode = $payment->qrcode->base64;
 	 
-     echo '{ "paymentUrl": "' . $payment->paymentUrl . '", 
-             "qrcode" : "' . $payment->qrcode->content . '",
+     echo '{ 
+             
              "qrcodeBase64" : "' . $payment->qrcode->base64 . '" }';
 	   
     endif;

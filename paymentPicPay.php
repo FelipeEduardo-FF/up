@@ -35,7 +35,7 @@
 	 
 	 //Função que faz a requisição
 	 public function requestPayment($produto,$cliente){
-		 
+		 $data = array()
 		  $data = array(
 		         'referenceId' => $produto->ref,
 		         'callbackUrl' => $this->urlCallBack,

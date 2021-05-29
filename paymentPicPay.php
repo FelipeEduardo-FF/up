@@ -18,7 +18,7 @@
 	   *@var type String: $urlReturn
 	   */
 	  // o link da notificacao 
-	  private $urlReturn = "";
+	  private $urlReturn = "https://felipepayment.herokuapp.com";
 	 
 	 /*
 	  *@Get token: https://bit.ly/2XyAWCy
@@ -59,6 +59,8 @@
 		 curl_close($ch);
 	     $return = json_decode($res);
 		 
+		$data=array();
+
 		 return $return;
 		  		  
 	 }
@@ -71,7 +73,7 @@
 		$content = trim(file_get_contents("php://input"));
 	    $payBody = json_decode($content);
 		 
-		 if(isset($payBody->authorizationId)):
+		
 		   
 		   $referenceId = $payBody->referenceId; 
 		 
@@ -79,21 +81,17 @@
 		   curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
 		   curl_setopt($ch, CURLOPT_HTTPHEADER, array('x-picpay-token: '.$this->x_picpay_token)); 
 		
+
+
 		   $res = curl_exec($ch);
 		   curl_close($ch);
 		   $notification = json_decode($res); 
 		  		   
-		   $notification->referenceId     = $payBody->referenceId; 
-		   $notification->authorizationId = $payBody->authorizationId;
+
+		   
 		   
 		   return $notification;
 		   
-		 else:
-		  
-			return false;
-		  
-		 endif;
-		  
 		 
 	 }
 	 

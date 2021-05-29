@@ -53,7 +53,7 @@
   
 	if(isset($payment->message)):
 	
-		echo '{ "referenceId": "' . $data["referenceId"] . '",
+		echo '{ 
 		"error" : "' . $payment->message . '" } ';
     
 		

@@ -46,7 +46,7 @@
    $cli['email']	 = $data["email"];
    $cli['telefone']  = $data["phone"];
    
-	unset($produto);
+	
    $produto = (object)$prod;
    $cliente = (object)$cli;
    
